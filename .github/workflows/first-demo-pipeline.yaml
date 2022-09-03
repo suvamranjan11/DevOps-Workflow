@@ -16,4 +16,4 @@ jobs:
           echo "Check contents on current directory"
           ls -lart
       - name: Final Task
-        run: I am done testing!
+        run: echo "I am done testing!"
