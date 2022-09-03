@@ -1,0 +1,19 @@
+name: first-demo-pipeline
+
+on: [push]
+
+jobs:
+  run_basc_taks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SourceCode
+        uses: actions/checkout@v3
+      - name: Run Commands
+        run: |
+          echo "Hi I am testing this as part of my learning"
+          echo "Check current working directoy"
+          pwd
+          echo "Check contents on current directory"
+          ls -lart
+      - name: Final Task
+        run: I am done testing!
