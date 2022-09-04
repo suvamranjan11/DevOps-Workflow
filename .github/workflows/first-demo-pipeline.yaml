@@ -2,6 +2,10 @@ name: first-demo-pipeline
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - workflow-demo
+  pull_request:
 
 jobs:
   run_basc_taks:
