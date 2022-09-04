@@ -1,6 +1,7 @@
 name: first-demo-pipeline
 
-on: [push]
+on: [push, workflow_dispatch]
+ 
 
 jobs:
   run_basc_taks:
