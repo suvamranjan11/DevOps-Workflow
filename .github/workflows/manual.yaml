@@ -1,4 +1,4 @@
-name: manul-pipeline
+name: manual-pipeline
 
 on:
   workflow_dispatch:
