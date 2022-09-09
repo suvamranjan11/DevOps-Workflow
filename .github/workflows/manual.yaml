@@ -1,4 +1,4 @@
-name: manual-pipeline  ${{ github.ref_name }}
+
 
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ on:
   push:
     branches:
       - main
-
+name: manual-pipeline  ${{ github.ref_name }}
 jobs:
   print-tag:
     runs-on: ubuntu-latest 
