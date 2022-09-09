@@ -3,7 +3,8 @@ on:
   workflow_dispatch:
     inputs:
       branchname:
-        description: Enter Branch Name t
+        description: Enter Branch Name
+        default: main
         required: true
         type: string
       logLevel:
