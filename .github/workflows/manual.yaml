@@ -1,4 +1,4 @@
-name: manual-pipeline | ${{ github.actor }} | ${{ github.ref_name }}
+name: manual-pipeline  ${{ github.ref_name }}
 
 on:
   workflow_dispatch:
