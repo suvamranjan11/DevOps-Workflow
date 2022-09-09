@@ -1,4 +1,4 @@
-name: manual-pipeline ${{ env.BRANCH_NAME }}
+name: manual-pipeline 
 on:
   workflow_dispatch:
     inputs:
