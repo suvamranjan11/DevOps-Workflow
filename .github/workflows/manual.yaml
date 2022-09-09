@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       branchname:
-        description: Please enter branch name
+        description: Enter Branch Name t
         required: true
         type: string
       logLevel:
@@ -23,7 +23,11 @@ on:
       tags:
         description: 'Test scenario tags'
         required: true 
-        type: string
+        type: string 
+  push:
+    branches:
+      - main
+
 jobs:
   print-tag:
     runs-on: ubuntu-latest 
@@ -34,3 +38,10 @@ jobs:
           ref: ${{ inputs.branchname }}
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ inputs.tags }} 
+      - name: Check environment variables
+        run: |
+          echo ${{ github.run.id }}
+          echo ${{ github.run.number }}
+          echo ${{ github.ref }}
+          echo ${{ github.ref.name }}
+          echo ${{ github.actor }}
