@@ -1,4 +1,4 @@
-name: manual-pipeline
+name: manual-pipeline ${{ env.BRANCH_NAME }}
 on:
   workflow_dispatch:
     inputs:
@@ -24,10 +24,8 @@ on:
         description: 'Test scenario tags'
         required: true 
         type: string 
-  push:
-    branches:
-      - main
-
+env:
+  BRANCH_NAME: ${{ github.ref_name }}
 jobs:
   print-tag:
     runs-on: ubuntu-latest 
@@ -45,4 +43,5 @@ jobs:
           echo ${{ github.ref }}
           echo ${{ github.ref_name }}
           echo ${{ github.actor }}
+          echo ${{ env.BRANCH_NAME }}
           ls
