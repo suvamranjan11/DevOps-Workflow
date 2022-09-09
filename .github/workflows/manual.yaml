@@ -1,4 +1,4 @@
-name: manual-pipeline
+name: manual-pipeline | Triggered By- ${{ github.actor }} | Branch- ${{ github.ref_name }}
 
 on:
   workflow_dispatch:
