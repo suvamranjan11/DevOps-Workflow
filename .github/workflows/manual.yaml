@@ -40,8 +40,8 @@ jobs:
         run: echo  The tags are ${{ inputs.tags }} 
       - name: Check environment variables
         run: |
-          echo ${{ github.run.id }}
-          echo ${{ github.run.number }}
+          echo ${{ github.run_id }}
+          echo ${{ github.run_number }}
           echo ${{ github.ref }}
-          echo ${{ github.ref.name }}
+          echo ${{ github.ref_name }}
           echo ${{ github.actor }}
